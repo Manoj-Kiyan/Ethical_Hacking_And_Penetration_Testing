@@ -1,0 +1,27 @@
+Commands:
+	mkdir mk
+	cd mk
+	touch hello.txt
+
+   1.echo --> To write inside the file.
+   			ex: echo "Hi! Mr_techie" > hello.txt
+   				echo 'System.out.print("Hi!Mr_Techie");' > hellotechie.java
+   				echo "HI"  >> hello.txt			//Add new one
+
+   2.cat --> To view written command
+   			ex: cat hello.txt
+
+   4.nano --> To Write Code
+   			  ex: nano hello.txt
+
+   5.mv --> Move
+   			ex: mv hello.txt world.txt		//Change file Name
+
+   6.cp --> Copy
+   			ex: cp world.txt  hello.txt    //Copy the file from world to hello
+
+   7.rm  -->Remove
+   			ex:rm world.txt					//Remove the file
+
+   8.rm * --> Remove All
+   			ex: rm *.txt					//remove all paticular(.txt) all files

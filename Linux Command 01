@@ -1,0 +1,35 @@
+Unix ---> Linux
+
+Unix is a CLI(Command line interbase) based OS.
+
+Linux --->GUI(Graphical User Interbase) base OS.
+
+Commands:
+  1.pwd   --> Present Working Directory
+
+  2.cd    --> Change Directiory
+
+  3.mkdir --> Make Directory
+  			ex: mkdir mk
+	  			cd mk
+	  			pwd
+	  			cd ../
+	  			cd mk/new file
+
+  4.rmdir --> Remove Directory
+
+  5.touch --> Create File
+  				ex:touch mk.txt
+  						 kiyan.txt
+  						 hello.java
+
+  6.ls    --> List
+  				ex: mk  kiyan  hello
+
+  6.ls -a --> List Hidden Files also.
+
+  8.ls -l --> List Details about the files.
+
+
+
+
