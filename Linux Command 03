@@ -1,0 +1,45 @@
+Folder Based Commands:
+        mkdir mk
+        rmdir mk
+        cp mk
+        mv mk
+
+Network Commands:
+	1.ping --> To use find IP.
+				ex:ping google.com 		//IPV6
+				   ping google.com -4	//IPV4
+
+	2.wget -->Web Get
+			ex:wget url
+
+Interface Based Commands:
+	To find network card(ex:wifi,adapter...)
+		1. sudo ifcongig
+	To find particular network card
+		2.sudo iwconfig(for wlan)
+
+Request Send Command:
+	1.send --> curl -X method(GET,PUT,DELETE,UPDATE) http:url
+
+		ex: curl -X GET http://google.com/
+			url -x GET http://google.com/  -i or I    	//Response getter
+
+	2.Inject Headers:
+
+		Headers - Extra info you send with http request
+			1.curl -H "Header -Name: Value" URL
+
+					ex:curl -x GET  http://google.com/ -H "refer : hack" 
+
+Net CAT Commands:
+   To use take Shell -- nif Army Tool
+   		nc
+
+
+
+
+
+
+   		
+
+				

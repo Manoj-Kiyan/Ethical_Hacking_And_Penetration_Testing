@@ -1,0 +1,108 @@
+HTTP Header Injection using curl:
+  
+
+  Step1:
+  		Browser send a request like this:
+  			GET / http / 1.1
+  				host: 		google.com
+  				User-Agent: Mozilla/5.0
+  				Accept: 	*/*
+
+  		GET --> Http Method
+  		Host,User-Agent,Accept --> All are headers(Extra info about the request)
+
+  Step2:
+  	We inject header do:
+  		1.spoof identity(fake browser,fake referer)
+  		2.Test Security(Host Referer Section,Referer Check Bypass)
+  		3.Send Session Tokens(Via Cookie header)
+  		4.Custom testing(X-Forward-For,Authorization,etc..)
+
+  Step3:
+  	curl Commands:
+  		we use curl commads to send http request from terminal
+  			ex1:curl http://httpbin.org/get
+
+
+
+
+📘 Topic: HTTP Header Injection using curl
+
+---------------------------------------------
+🧠 What is a Header?
+
+- Header = Extra info in HTTP request
+- Examples: User-Agent, Referer, Host, Cookie
+
+---------------------------------------------
+💥 Why Inject Headers?
+
+- Spoof browser / user identity
+- Test for vulnerabilities
+- Bypass referer checks
+- Simulate logged-in users (cookies)
+
+---------------------------------------------
+🛠 curl Basics:
+
+Command format:
+curl -H "Header-Name: value" [URL]
+
+Example:
+curl -H "User-Agent: Hacker" http://example.com
+
+---------------------------------------------
+🔎 Common Header Injection Examples:
+
+1️⃣ Spoof User-Agent
+curl -H "User-Agent: Mozilla/5.0" http://httpbin.org/headers
+
+2️⃣ Fake Referer
+curl -H "Referer: https://evil.com" http://httpbin.org/headers
+
+3️⃣ Host Header Injection
+curl -H "Host: attacker.com" http://httpbin.org/headers
+
+4️⃣ Custom Header
+curl -H "X-Test: value" http://httpbin.org/headers
+
+5️⃣ Cookie Injection
+curl -H "Cookie: sessionid=xyz123" http://httpbin.org/cookies
+
+---------------------------------------------
+📌 Multiple Headers in One Request:
+
+curl -H "User-Agent: Mozilla" -H "Referer: evil.com" http://httpbin.org/headers
+
+---------------------------------------------
+⚠ Why google.com fails?
+
+- Google has firewall, doesn't reflect back headers
+- Blocks curl-like requests
+- Use httpbin.org or test sites for practice
+
+---------------------------------------------
+🧪 Safe Testing Site:
+
+http://httpbin.org/headers
+
+- Reflects back all headers sent
+- Use for learning, testing injections
+
+---------------------------------------------
+✅ Summary Table:
+
+| Header Type   | Example Command                                     |
+|---------------|------------------------------------------------------|
+| User-Agent    | curl -H "User-Agent: Mozilla" URL                   |
+| Referer       | curl -H "Referer: evil.com" URL                     |
+| Host          | curl -H "Host: attacker.com" URL                    |
+| Cookie        | curl -H "Cookie: key=value" URL                     |
+| Custom Header | curl -H "X-Test: macha" URL                         |
+
+---------------------------------------------
+💡 Tip: Use -v or -I to see more info
+- curl -v URL      → Full request/response  (v verbose mode)
+- curl -I URL      → Only headers
+
+---------------------------------------------
