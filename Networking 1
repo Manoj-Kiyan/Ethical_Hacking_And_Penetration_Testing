@@ -1,0 +1,127 @@
+Netwoking --> Inter Connecting Two or More Devices through Network.
+
+
+Network Topology:
+		It is arrangement of different elements like node,links or devices in a computer network.
+
+There are two major categories in Network Topology:
+  1.Physical Network Topology-->Actual Structure of the Physical medium for the transmission of data.
+
+  2.Logical Network Topology-->Transmission of data between devices present in the network is important for the proper functioning of the network.
+
+Types of Network Topology:
+		POINT TO POINT
+		BUS
+		STAR
+		RING
+		MESH
+		TREE
+
+1.POINT TO POINT:
+	Simple communication between two nodes,one is sender and another one is receiver.It provides high bandwidth.
+
+	DEVICE 1  -----------  DEVICE 2
+
+2.MESH TOPOLOGY:
+	In Mesh,Every Device is connected to the another devices in a particular channel.
+
+	Every device is connected to another via dedicated channels. These channels are known as links.
+
+	The protocols used are 
+		AHCP(Ad Hoc Configuration Protocols)
+		DHCP(Dynamic Host Configuration Protocol)
+If we have four device in channel:
+	DEVICE 1 --(DEVICE 2 , DEVICE 3 and DEVICE 4)
+	DEVICE 2 --(DEVICE 1 , DEVICE 3 and DEVICE 4)
+	DEVICE 3 --(DEVICE 1 , DEVICE 2 and DEVICE 4)
+	DEVICE 4 --(DEVICE 1 , DEVICE 2 and DEVICE 3)
+
+	Suppose, the N number of devices are connected with each other in a mesh topology, the total number of ports that are required by each device is N-1. In Figure , there are 6 devices connected to each other, hence the total number of ports required by each device is 5. The total number of ports required = N * (N-1).//30
+
+	Required dedicated links=N * (N-1)/2.//15
+
+3.STAR TOPOLOGY:
+		All the devices are connected to a single hub through a cable.
+
+		The HUB is the central node and all other nodes are connected to central node.
+
+		In Star Topology, many popular Ethernet LAN protocols are used as CD(Collision Detection), CSMA (Carrier Sense Multiple Access), etc.
+
+		DEVICE 1---|
+		DEVICE 2   |
+		DEVICE 3   |---->HUB(Central Node)
+		DEVICE 4   |
+		DEVICE 5---|
+
+		:)If N devices are connected to each other in a star topology, then the number of cables required to connect them is N. So, it is easy to set up.
+
+		:)Each device requires only 1 port i.e. to connect to the hub, therefore the total number of ports required is N.
+
+		:)It is Robust. If one link fails only that link will affect and not other than that.
+
+4.BUS TOPOLOGY:
+		Network Type in which every computer and network device is connected to a single cable.
+
+		It is Bi-directional.
+
+		if the backbone fails the topology crashes. In Bus Topology, various MAC (Media Access Control) protocols are followed by LAN ethernet connections like TDMA, Pure Aloha, CDMA, Slotted Aloha, etc.
+
+		 	 DEVICE 1       DEVICE 2
+				|			   |
+TERMINATOR|-------------------------------|
+		            |				  |
+		         DEVICE 3           DEVICE 4
+
+5.RING TOPOLOGY:
+		It forms a ring connecting devices with exactly two neighbouring devices.
+
+		A number of repeaters are used for Ring topology with a large number of nodes, because if someone wants to send some data to the last node in the ring topology with 100 nodes, then the data will have to pass through 99 nodes to reach the 100th node. Hence to prevent data loss repeaters are used in the network.
+
+		The data flows in one direction, i.e. it is unidirectional, but it can be made bidirectional by having 2 connections between each Network Node, it is called Dual Ring Topology. In-Ring Topology, the Token Ring Passing protocol is used by the workstations to transmit the data.
+
+		The most common access method of ring topology is token passing.
+
+Token passing: It is a network access method in which a token is passed from one node to another node.
+Token: It is a frame that circulates around the network.
+
+Operations of Ring Topology:
+One station is known as a monitor station which takes all the responsibility for performing the operations.
+To transmit the data, the station has to hold the token. After the transmission is done, the token is to be released for other stations to use.
+When no station is transmitting the data, then the token will circulate in the ring.
+There are two types of token release techniques: Early token release releases the token just after transmitting the data and Delayed token release releases the token after the acknowledgment is received from the receiver.
+
+			|----DEVICE 1----|
+			|				 |
+			|				 |
+		DEVICE 6 		DEVICE 2
+			|				 |
+			|				 |
+			|				 |
+		DEVICE 5 		DEVICE 3
+			|				 |
+			|				 |
+			|----DEVICE 6----|
+
+6.TREE TOPOLOGY:
+	It is a variation of star topology.
+
+	Hierarchial flow of data.
+
+	In Tree Topology, protocols like DHCP and SAC (Standard Automatic Configuration) are used.
+
+			|----DEVICE 1----|
+			|				 |
+			|				 |
+		DEVICE 2 		DEVICE 3	
+			|				 |
+			|				 |
+	   -----------	    -----------
+	   |         |      |         |  
+	   |         |      |         |        
+    DEVICE 4  DEVICE 5 DEVICE 6 DEVICE 7
+
+
+	In tree topology, the various secondary hubs are connected to the central hub which contains the repeater. This data flow from top to bottom i.e. from the central hub to the secondary and then to the devices or from bottom to top i.e. devices to the secondary hub and then to the central hub.
+
+7.HYBRID TOPOLOGY:
+	Hybrid Topology is the combination of all the various types of topologies we have studied above. Hybrid Topology is used when the nodes are free to take any form. It means these can be individuals such as Ring or Star topology or can be a combination of various types of topologies seen above. Each individual topology uses the protocol that has been discussed earlier.

@@ -1,0 +1,23 @@
+Commands:
+	1.whoami --> Find User Name.
+
+	2.ls /bin/ | grep "curl" --> To find pathicular file is present or not.
+
+	  ex:
+	  	mk_2004_03@MrTechie:~$ ls /bin/ | grep "curl"
+		curl
+		mk_2004_03@MrTechie:~$ ls /bin/ | grep "curlll"
+		mk_2004_03@MrTechie:~$ ls /bin/ | grep "man"
+		catman
+		landscape-manager
+		man
+		man-recode
+		mandb
+		manifest
+		manpath
+		pod2man
+		mk_2004_03@MrTechie:~$ ls /bin/ |grep "ifconfig"
+		mk_2004_03@MrTechie:~$ ls /bin/ |grep "iwconfig"
+		mk_2004_03@MrTechie:~$ ls /bin/ |grep "pwd"
+		pwd
+		pwdx
