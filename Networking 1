@@ -125,3 +125,20 @@ There are two types of token release techniques: Early token release releases th
 
 7.HYBRID TOPOLOGY:
 	Hybrid Topology is the combination of all the various types of topologies we have studied above. Hybrid Topology is used when the nodes are free to take any form. It means these can be individuals such as Ring or Star topology or can be a combination of various types of topologies seen above. Each individual topology uses the protocol that has been discussed earlier.
+
+
+
+	ARP(Address Resolution Protocol):
+		Normally we use IP for request and response scenario.But if u want MAC Address of where you want to talk then ARP Comes in handy.
+
+		That turns IP into Physical Mac Adrress.
+
+		  IP
+		  |
+		  |
+		 ARP
+		  |
+		  |
+	  Mac Address
+
+	  https://media.geeksforgeeks.org/wp-content/uploads/20240212121108/How-Address-Resolution-Protocol-ARP-works---gif-opt-(1).gif
