@@ -30,6 +30,8 @@ Commands:
 
   8.ls -l --> List Details about the files.
 
+  9.sudo su  --> super user previllage (like  open run as adminstrator)
+
 
 
 

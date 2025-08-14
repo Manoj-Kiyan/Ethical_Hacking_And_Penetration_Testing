@@ -1,0 +1,29 @@
+ PHP built-in server — development use:
+
+		1.cd /path/to/your/project
+		2.sudo php -S 127.0.0.1:8080
+					or
+		   php -S 127.0.0.1:8080		
+Notes
+	sudo mukkiyam illa for port 8080. (Port <1024-na sudo venum.)
+
+	Stop panna: Ctrl + C in terminal.
+
+	If you want other devices in same LAN to access: php -S 0.0.0.0:8080 (security risk — only if you trust the network).
+
+	To serve a specific directory: php -S 127.0.0.1:8080 -t public
+
+	Router script (for frameworks): php -S 127.0.0.1:8080 router.php	
+ 
+ Apache Server:
+ 	sudo apt update
+	sudo apt install apache2
+  start/enable/status:
+  	sudo systemctl start apache2
+	sudo systemctl enable apache2     # boot-kku auto start
+	sudo systemctl status apache2     # service status check
+
+
+Check logs if fail. Try curl:
+	curl -I http://127.0.0.1/hello.html
+

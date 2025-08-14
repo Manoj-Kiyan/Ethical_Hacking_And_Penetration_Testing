@@ -1,0 +1,28 @@
+Port Forwarding:
+ 
+ 1.Static IP
+ 2.Router
+ 3.ngrok
+
+
+Apache server:
+ ngrok:
+ 	wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-stable-linux-amd64.zip
+	unzip ngrok-stable-linux-amd64.zip
+	sudo mv ngrok /usr/local/bin/
+
+	ngrok version
+
+ 	ngrok authtoken YOUR_AUTHTOKEN(ngrok config add-authtoken 	31Htx6MgSMZZjf2RwBfEfm8RY0f_4MGcwxxDp6xnLtE7t2ois)
+ 	sudo service apache2 start
+ 	ngrok http 80
+	Acess logs:
+	http://127.0.0.1:4040/inspect/http
+
+Php Server:
+	sudo  php -S 127.0.0.1:8081
+	[Thu Aug 14 14:12:09 2025] PHP 8.2.21 Development Server (http://127.0.0.1:8081) started
+
+	ngrok http 8081     
+
+
